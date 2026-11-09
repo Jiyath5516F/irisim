@@ -1,0 +1,24 @@
+{
+  "_comment": "Scenarios and cameras for irisim's optional test structures (glass pieces, lamp posts, coloured-light booths, light poles, a large closed hall, a small closed room for GI energy tests) and a deep-underground variant of the cave. Use: irisim PACK --presets examples/presets/test-structures.json --scenario gallery. Built from the investigations of the Vibe Shader project, but nothing here is pack specific.",
+  "cameras": {
+    "glass":     {"eye": [43.5, null, 31.5], "target": [43.5, 35.0, 38.5]},
+    "glass2":    {"eye": [44.3, 34.9, 34.4], "target": [46.9, 34.2, 38.0]},
+    "glass3":    {"eye": [40.8, 34.8, 35.4], "target": [39.5, 34.3, 38.2]},
+    "glass4":    {"eye": [43.5, 37.4, 45.0], "target": [44.0, 33.0, 39.5]},
+    "interior2": {"eye": [61.3, 36.3, 44.2], "target": [54.5, 34.4, 44.2]},
+    "village":   {"eye": [50.5, 33.62, 18.5], "target": [52.0, 33.0, 44.0]},
+    "gallery":   {"eye": [20.5, 35.62, 5.5], "target": [20.5, 34.5747, 15.4452]},
+    "poles":     {"eye": [22.5, 35.62, 4.5], "target": [22.5, 37.0117, 14.4027]},
+    "hall":      {"eye": [61.5, 40.62, 3.5], "target": [68.5654, 40.2187, 10.5654]},
+    "furnace":   {"eye": [81.5, 40.62, 5.5], "target": [88.4216, 38.575, 12.4216]}
+  },
+  "scenarios": {
+    "glass":    {"time": 6000,  "camera": "glass",   "structures": ["glass_gallery"]},
+    "village":  {"time": 18000, "camera": "village", "structures": ["village"]},
+    "gallery":  {"time": 18000, "camera": "gallery", "structures": ["gallery"]},
+    "poles":    {"time": 18000, "camera": "poles",   "structures": ["poles"]},
+    "hall":     {"time": 18000, "camera": "hall",    "structures": ["hall"]},
+    "furnace":  {"time": 18000, "camera": "furnace", "structures": ["furnace"]},
+    "deepcave": {"time": 6000,  "camera": "cave",    "origin_dy": -40}
+  }
+}

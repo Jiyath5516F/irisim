@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "irisim"
+version = "0.1.0"
+description = "Headless mini-Iris: run a Minecraft Java shader pack's real programs on a software OpenGL context, without Minecraft"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+keywords = ["minecraft", "iris", "optifine", "shaders", "glsl", "opengl", "headless", "testing", "llvmpipe"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Multimedia :: Graphics :: 3D Rendering",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+    "numpy>=1.21",
+    "Pillow>=9",
+    "PyOpenGL>=3.1.6",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+irisim = "irisim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+irisim = ["presets/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
